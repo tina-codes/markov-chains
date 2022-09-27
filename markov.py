@@ -60,7 +60,15 @@ def make_text(chains):
 
     words = []
 
-    # your code goes here
+    key_list = list(chains.keys())
+    first_key = choice(key_list)
+    print(first_key)
+    
+    value = choice(chains[first_key])
+    print(value)
+
+    new_key = (first_key[1], value)
+    print(new_key)
 
     return ' '.join(words)
 
@@ -74,6 +82,6 @@ input_text = open_and_read_file(input_path)
 chains = make_chains(input_text)
 
 # Produce random text
-#random_text = make_text(chains)
+random_text = make_text(chains)
 
 #print(random_text)
